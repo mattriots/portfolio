@@ -8,18 +8,14 @@ import ColorPickerDrop from './ColorPickerDrop';
 import ResumeModal from './ResumeModal';
 
 const Navbar = ({ setBackgroundColor }) => {
-
    /* Handle Clicks */
    const [nav, setNav] = useState(false);
    const handleClick = () => setNav(!nav);
 
-
-  /* Resume Modal */
+   /* Resume Modal */
    const [isModalOpen, setIsModalOpen] = useState(false);
    const openResumeModal = () => setIsModalOpen(true);
    const closeResumeModal = () => setIsModalOpen(false);
-
-   
 
    return (
       <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300 z-10">
@@ -28,7 +24,7 @@ const Navbar = ({ setBackgroundColor }) => {
                <img src={Logo} alt="logo" className="w-14 rounded-md" />
             </Link>
          </div>
-         {/* menu */}
+         {/* Top Right Menu */}
 
          <div className="hidden md:flex justify-center flex-grow">
             <ColorPickerDrop setBackgroundColor={setBackgroundColor} />
@@ -75,47 +71,86 @@ const Navbar = ({ setBackgroundColor }) => {
          <div onClick={handleClick} className="md:hidden z-10">
             {!nav ? <FaBars /> : <FaTimes />}
          </div>
-
-         {/* Mobile Menu */}
-         <ul
+         <div
             className={
                !nav
                   ? 'hidden'
                   : 'absolute top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center'
             }>
-            <li className="py-6 text-4xl">
-               <Link onClick={handleClick} to="home" smooth={true} duration={500}>
-                  Home
-               </Link>
-            </li>
-            <li className="py-6 text-4xl">
-               <Link onClick={handleClick} to="about" smooth={true} duration={500}>
-                  About
-               </Link>
-            </li>
-            <li className="py-6 text-4xl">
-               <Link onClick={handleClick} to="skills" smooth={true} duration={500}>
-                  Skills
-               </Link>
-            </li>
-            <li className="py-6 text-4xl">
-               <Link onClick={handleClick} to="experience" smooth={true} duration={500}>
-                  Experience
-               </Link>
-            </li>
-            <li className="py-6 text-4xl">
-               <Link onClick={handleClick} to="projects" smooth={true} duration={500}>
-                  Projects
-               </Link>
-            </li>
-            <li className="py-6 text-4xl">
-               <Link onClick={handleClick} to="contact" smooth={true} duration={500}>
-                  Contact
-               </Link>
-            </li>
-         </ul>
+            {/* Mobile Menu */}
+            <ul className="flex flex-col justify-center items-center">
+               <li className="py-6 text-4xl">
+                  <Link onClick={handleClick} to="home" smooth={true} duration={500}>
+                     Home
+                  </Link>
+               </li>
+               <li className="py-6 text-4xl">
+                  <Link onClick={handleClick} to="about" smooth={true} duration={500}>
+                     About
+                  </Link>
+               </li>
+               <li className="py-6 text-4xl">
+                  <Link onClick={handleClick} to="skills" smooth={true} duration={500}>
+                     Skills
+                  </Link>
+               </li>
+               <li className="py-6 text-4xl">
+                  <Link onClick={handleClick} to="experience" smooth={true} duration={500}>
+                     Experience
+                  </Link>
+               </li>
+               <li className="py-6 text-4xl">
+                  <Link onClick={handleClick} to="projects" smooth={true} duration={500}>
+                     Projects
+                  </Link>
+               </li>
+               <li className="py-6 text-4xl">
+                  <Link onClick={handleClick} to="contact" smooth={true} duration={500}>
+                     Contact
+                  </Link>
+               </li>
+            </ul>
+            <div className="absolute bottom-0 left-0 w-full flex items-center p-4 bg-[#0a192f]">
+               <ul className="flex justify-evenly items-center w-full mx-10">
+                  <li className="w-14 h-14 flex justify-center items-center  bg-blue-600 rounded-md">
+                     <a
+                        className="flex justify-center items-center w-full text-gray-300"
+                        href="https://www.linkedin.com/in/matt-depauw/"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        <FaLinkedin size={20} />
+                     </a>
+                  </li>
+                  <li className="w-14 h-14 flex justify-center items-center  bg-[#333333] rounded-md">
+                     <a
+                        className="flex justify-center items-center w-full text-gray-300"
+                        href="https://www.github.com/mattriots"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        <FaGithub size={20} />
+                     </a>
+                  </li>
+                  <li className="w-14 h-14 flex justify-center items-center  bg-[#6fc2b0] rounded-md">
+                     <a
+                        className="flex justify-center items-center w-full text-gray-300"
+                        href="mailto:mattdepauw@gmail.com"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        <HiOutlineMail size={20} />
+                     </a>
+                  </li>
+                  <li
+                     className="w-14 h-14 flex justify-center items-center  bg-[#565f69] rounded-md"
+                     onClick={openResumeModal}>
+                     <div className="flex justify-center items-center w-full text-gray-300">
+                        <BsFillPersonLinesFill size={20} />
+                     </div>
+                  </li>
+               </ul>
+            </div>
+         </div>
 
-         {/* Social */}
+         {/* Social on left side*/}
          <div className="hidden lg:flex fixed flex-col top-[35%] left-0">
             <ul>
                <li className="w-[160px] h-[60px] rounded-md flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-600">
