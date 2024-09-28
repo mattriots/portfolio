@@ -2,7 +2,7 @@ import React from 'react';
 
 const About = () => {
    return (
-      <div name="about" className="w-full h-screen bg-[#0a192f] text-gray-300">
+      <div name="about" className="w-full h-screen bg-inherit text-gray-300">
          <div className="flex flex-col justify-center items-center w-full h-full">
             <div className="max-w-[1000px] w-full grid grid-cols-2 gap-8">
                <div className="sm:text-right pb-8 pl-4">
@@ -12,10 +12,13 @@ const About = () => {
             </div>
             <div className="max-w-[1000px] w-full grid sm:grid-cols-2 gap-8 px-4">
                <div className="sm:text-right text-4xl font-bold">
-                  <p>Hi. I'm Matt, nice to meet you</p>
+                  <p>Hi. I'm Matt</p>
                </div>
                <div>
-                  <p>I'm a full stack web developer based in the USA</p>
+                  <p>I'm a full stack web developer based in the USA.
+                     This is a portfolio site that I built using React and Tailwind CSS.
+                     I borrowed this design from // ENTER THE GUY'S NAME HERE //
+                  </p>
                </div>
             </div>
          </div>
