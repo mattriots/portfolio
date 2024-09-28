@@ -5,10 +5,22 @@ import { BsFillPersonLinesFill } from 'react-icons/bs';
 import { Link } from 'react-scroll';
 import Logo from '../assets/MD_logo_idea.png';
 import ColorPickerDrop from './ColorPickerDrop';
+import ResumeModal from './ResumeModal';
 
 const Navbar = ({ setBackgroundColor }) => {
+
+   /* Handle Clicks */
    const [nav, setNav] = useState(false);
    const handleClick = () => setNav(!nav);
+
+
+  /* Resume Modal */
+   const [isModalOpen, setIsModalOpen] = useState(false);
+   const openResumeModal = () => setIsModalOpen(true);
+   const closeResumeModal = () => setIsModalOpen(false);
+
+   
+
    return (
       <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300 z-10">
          <div>
@@ -133,17 +145,16 @@ const Navbar = ({ setBackgroundColor }) => {
                      Email <HiOutlineMail size={30} />
                   </a>
                </li>
-               <li className="w-[160px] h-[60px] rounded-md  flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#565f69]">
-                  <a
-                     className="flex justify-between items-center w-full text-gray-300"
-                     href="change this"
-                     target="_blank"
-                     rel="noopener noreferrer">
+               <li
+                  className="w-[160px] h-[60px] rounded-md  flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#565f69]"
+                  onClick={openResumeModal}>
+                  <div className="flex justify-between items-center w-full text-gray-300">
                      Resume <BsFillPersonLinesFill size={30} />
-                  </a>
+                  </div>
                </li>
             </ul>
          </div>
+         <ResumeModal isOpen={isModalOpen} onClose={closeResumeModal} />
       </div>
    );
 };
