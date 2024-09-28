@@ -1,28 +1,35 @@
 import React from 'react';
+import {
+   FaGraduationCap,
+   FaBriefcase,
+   FaLaptopCode,
+   FaTools,
+   FaProjectDiagram,
+} from 'react-icons/fa';
 
 const ResumePage = () => {
    return (
-      <div className="bg-gray-100 min-h-screen p-8 text-gray-600">
-         <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg p-6">
+      <div className="bg-gray-100 rounded-lg p-4 md:p-8 min-h-screen text-gray-600">
+         <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg p-4 md:p-6">
             {/* Header Section */}
-            <div className="text-center mb-8">
-               <h1 className="text-3xl font-bold mb-2">Matt DePauw</h1>
-               <p>
-                  mattdepauw@gmail.com | 805 423 4462 |{' '}
+            <div className="text-center mb-6 md:mb-8">
+               <h1 className="text-2xl md:text-3xl font-bold mb-2 text-blue-800">Matt DePauw</h1>
+               <p className="text-sm md:text-base">
                   <a
-                     href="https://linkedin.com/in/matt-depauw"
-                     className="text-blue-500 hover:underline"
-                     target="_blank"
-                     rel="noopener noreferrer">
-                     LinkedIn
+                     href="mailto:mattdepauw@gmail.com"
+                     className="hover:text-blue-700 transition duration-300">
+                     mattdepauw@gmail.com
                   </a>
                </p>
+               <p className="text-sm md:text-base">805 423 4462 </p>
             </div>
 
             {/* Education Section */}
-            <div className="mb-6">
-               <h2 className="text-xl font-bold mb-2">Education</h2>
-               <div className="space-y-2">
+            <div className="mb-6 md:mb-8">
+               <h2 className="text-lg md:text-xl font-bold mb-2 flex items-center text-blue-800">
+                  <FaGraduationCap className="mr-2" /> Education
+               </h2>
+               <div className="space-y-2 text-sm md:text-base">
                   <div>
                      <h3 className="font-semibold">B.S. Computer Science</h3>
                      <p>
@@ -41,27 +48,20 @@ const ResumePage = () => {
             </div>
 
             {/* Experience Section */}
-            <div className="mb-6">
-               <h2 className="text-xl font-bold mb-2">Experience</h2>
-               <div className="space-y-4">
+            <div className="mb-6 md:mb-8">
+               <h2 className="text-lg md:text-xl font-bold mb-2 flex items-center text-blue-800">
+                  <FaBriefcase className="mr-2" /> Experience
+               </h2>
+               <div className="space-y-4 text-sm md:text-base">
                   <div>
                      <h3 className="font-semibold">User Success Engineer</h3>
                      <p className="italic">Dassault Systèmes, November 2023 – Present</p>
                      <ul className="list-disc list-inside">
+                        <li>Reduced software downtime by 20% by applying SQL queries.</li>
+                        <li>Increased customer feedback by 25% through issue resolution.</li>
+                        <li>Enhanced product usability, reducing customer support calls by 15%.</li>
                         <li>
-                           Applied SQL queries to detect and remove bugs, reducing software downtime
-                           by 20%.
-                        </li>
-                        <li>
-                           Increased positive customer feedback by 25% through effective issue
-                           resolution.
-                        </li>
-                        <li>
-                           Enhanced product usability, leading to a 15% decrease in customer support
-                           calls.
-                        </li>
-                        <li>
-                           Reduced issue resolution time by 30%, providing personalized support.
+                           Decreased issue resolution time by 30% by providing personalized support.
                         </li>
                      </ul>
                   </div>
@@ -69,10 +69,7 @@ const ResumePage = () => {
                      <h3 className="font-semibold">Software Engineer (Contractor)</h3>
                      <p className="italic">Co-Curator, October 2022 – November 2023</p>
                      <ul className="list-disc list-inside">
-                        <li>
-                           Developed custom eCommerce solutions for major clients like SFMOMA and
-                           Boarderie.
-                        </li>
+                        <li>Developed custom eCommerce solutions for major clients like SFMOMA.</li>
                         <li>Designed 5+ functional and visually stunning Shopify storefronts.</li>
                         <li>
                            Integrated APIs and managed a sizable codebase, resolving 100+ merge
@@ -94,9 +91,11 @@ const ResumePage = () => {
             </div>
 
             {/* Skills Section */}
-            <div className="mb-6">
-               <h2 className="text-xl font-bold mb-2">Skills</h2>
-               <div className="grid grid-cols-2 gap-4">
+            <div className="mb-6 md:mb-8">
+               <h2 className="text-lg md:text-xl font-bold mb-2 flex items-center text-blue-800">
+                  <FaTools className="mr-2" /> Skills
+               </h2>
+               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm md:text-base">
                   <div>
                      <h3 className="font-semibold">Languages</h3>
                      <p>Java, Python, C/C++, React, JavaScript, HTML5, CSS3, Shell, SQL</p>
@@ -117,29 +116,34 @@ const ResumePage = () => {
             </div>
 
             {/* Projects Section */}
-            <div className="mb-6">
-               <h2 className="text-xl font-bold mb-2">Programming Projects</h2>
-               <div>
-                  <h3 className="font-semibold">CI/CD-Enabled To-Do List App</h3>
-                  <ul className="list-disc list-inside">
-                     <li>
-                        Created an Express.js backend, improving page load and API response times
-                        significantly.
-                     </li>
-                     <li>
-                        Utilized CI/CD pipelines on GitHub to boost developer productivity by 25%.
-                     </li>
-                     <li>Deployed the app on Microsoft Azure, ensuring 99.9% uptime.</li>
-                  </ul>
-               </div>
-               <div>
-                  <h3 className="font-semibold">Java Video Game Refactoring</h3>
-                  <ul className="list-disc list-inside">
-                     <li>
-                        Refactored Java game to an OOP design, increasing maintainability by 30%.
-                     </li>
-                     <li>Used JUnit for unit testing, ensuring 100% code reliability.</li>
-                  </ul>
+            <div className="mb-6 md:mb-8">
+               <h2 className="text-lg md:text-xl font-bold mb-2 flex items-center text-blue-800">
+                  <FaProjectDiagram className="mr-2" /> Programming Projects
+               </h2>
+               <div className="space-y-4 text-sm md:text-base">
+                  <div>
+                     <h3 className="font-semibold">CI/CD-Enabled To-Do List App</h3>
+                     <ul className="list-disc list-inside">
+                        <li>
+                           Created an Express.js backend, improving page load and API response times
+                           significantly.
+                        </li>
+                        <li>
+                           Utilized CI/CD pipelines on GitHub to boost developer productivity by
+                           25%.
+                        </li>
+                        <li>Deployed the app on Microsoft Azure, ensuring 99.9% uptime.</li>
+                     </ul>
+                  </div>
+                  <div>
+                     <h3 className="font-semibold">Java Video Game Refactoring</h3>
+                     <ul className="list-disc list-inside">
+                        <li>
+                           Refactored Java game to an OOP design, increasing maintainability by 30%.
+                        </li>
+                        <li>Used JUnit for unit testing, ensuring 100% code reliability.</li>
+                     </ul>
+                  </div>
                </div>
             </div>
          </div>

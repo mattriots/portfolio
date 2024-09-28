@@ -59,12 +59,12 @@ const Navbar = ({ setBackgroundColor }) => {
                   Projects
                </Link>
             </li>
-            <li className="py-6 hover:-translate-y-1 hover:text-indigo-500 hover:scale-110 duration-300 ">
+            {/* <li className="py-6 hover:-translate-y-1 hover:text-indigo-500 hover:scale-110 duration-300 ">
                {' '}
                <Link to="contact" smooth={true} duration={500}>
                   Contact
                </Link>
-            </li>
+            </li> */}
          </ul>
 
          {/* Hamburger */}
@@ -104,11 +104,11 @@ const Navbar = ({ setBackgroundColor }) => {
                      Projects
                   </Link>
                </li>
-               <li className="py-6 text-4xl">
+               {/* <li className="py-6 text-4xl">
                   <Link onClick={handleClick} to="contact" smooth={true} duration={500}>
                      Contact
                   </Link>
-               </li>
+               </li> */}
             </ul>
             <div className="absolute bottom-0 left-0 w-full flex items-center p-4 bg-[#0a192f]">
                <ul className="flex justify-evenly items-center w-full mx-10">
