@@ -30,7 +30,7 @@ const Projects = () => {
                            href="https://www.nightriots.com/"
                            target="_blank"
                            rel="noopener noreferrer">
-                           <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
+                           <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg hover:scale-110 duration-500">
                               Link
                            </button>
                         </a>
@@ -38,7 +38,7 @@ const Projects = () => {
                            href="https://github.com/mattriots/nightriots"
                            target="_blank"
                            rel="noopener noreferrer">
-                           <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
+                           <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg hover:scale-110 duration-500">
                               Code
                            </button>
                         </a>
@@ -54,7 +54,7 @@ const Projects = () => {
                      <span className="text-2xl font-bold text-white tracking-wider">Portfolio</span>
                      <div className="pt-8 text-center">
                         <a href="/">
-                           <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
+                           <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg hover:scale-110 duration-500">
                               Link
                            </button>
                         </a>
@@ -62,7 +62,7 @@ const Projects = () => {
                            href="https://github.com/mattriots/portfolio"
                            target="_blank"
                            rel="noopener noreferrer">
-                           <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
+                           <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg hover:scale-110 duration-500">
                               Code
                            </button>
                         </a>

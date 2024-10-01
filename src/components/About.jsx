@@ -15,9 +15,9 @@ const About = () => {
                   <p>Hi. I'm Matt</p>
                </div>
                <div>
-                  <p>I am a Musician turned Software Engineer</p>
+                  <p className='text-2xl pb-4'>I am a Musician turned Software Engineer</p>
                   <p>
-                     I am highly interested in the world of Full Stack Dev and Devops/Cloud Infrastructure.
+                     I am highly interested in the world of Full Stack Development and Devops/Cloud Infrastructure.
                      This is a portfolio site that I built using React and Tailwind CSS.
                      The goal of this page is to showcase my abilities as a developer while also
                      offering a playground for me to experiment with new technologies and projects. 

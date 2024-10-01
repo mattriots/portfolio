@@ -21,7 +21,11 @@ const Navbar = ({ setBackgroundColor }) => {
       <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300 z-10">
          <div>
             <Link to="home" smooth={true} duration={500}>
-               <img src={Logo} alt="logo" className="w-14 rounded-md" />
+               <img
+                  src={Logo}
+                  alt="logo"
+                  className="w-14 rounded-md hover:translate-x-1 hover:translate-y-1 hover:scale-110 duration-500"
+               />
             </Link>
          </div>
          {/* Top Right Menu */}
