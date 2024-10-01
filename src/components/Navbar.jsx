@@ -47,16 +47,16 @@ const Navbar = ({ setBackgroundColor }) => {
                   Skills
                </Link>
             </li>
+            <li className="py-6 hover:-translate-y-1 hover:text-green-500 hover:scale-110 duration-300">
+               {' '}
+               <Link to="projects" smooth={true} duration={500}>
+                  Projects
+               </Link>
+            </li>
             <li className="py-6 hover:-translate-y-1 hover:text-green-500 hover:scale-110 duration-300 ">
                {' '}
                <Link to="experience" smooth={true} duration={500}>
                   Experience
-               </Link>
-            </li>
-            <li className="py-6 hover:-translate-y-1 hover:text-blue-500 hover:scale-110 duration-300">
-               {' '}
-               <Link to="projects" smooth={true} duration={500}>
-                  Projects
                </Link>
             </li>
             {/* <li className="py-6 hover:-translate-y-1 hover:text-indigo-500 hover:scale-110 duration-300 ">
@@ -95,15 +95,16 @@ const Navbar = ({ setBackgroundColor }) => {
                   </Link>
                </li>
                <li className="py-6 text-4xl">
-                  <Link onClick={handleClick} to="experience" smooth={true} duration={500}>
-                     Experience
-                  </Link>
-               </li>
-               <li className="py-6 text-4xl">
                   <Link onClick={handleClick} to="projects" smooth={true} duration={500}>
                      Projects
                   </Link>
                </li>
+               <li className="py-6 text-4xl">
+                  <Link onClick={handleClick} to="experience" smooth={true} duration={500}>
+                     Experience
+                  </Link>
+               </li>
+
                {/* <li className="py-6 text-4xl">
                   <Link onClick={handleClick} to="contact" smooth={true} duration={500}>
                      Contact
