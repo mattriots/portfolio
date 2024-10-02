@@ -21,7 +21,11 @@ const Navbar = ({ setBackgroundColor }) => {
       <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300 z-10">
          <div>
             <Link to="home" smooth={true} duration={500}>
-               <img src={Logo} alt="logo" className="w-14 rounded-md" />
+               <img
+                  src={Logo}
+                  alt="logo"
+                  className="w-14 rounded-md hover:translate-x-1 hover:translate-y-1 hover:scale-110 duration-500"
+               />
             </Link>
          </div>
          {/* Top Right Menu */}
@@ -43,20 +47,20 @@ const Navbar = ({ setBackgroundColor }) => {
             </li>
             <li className="py-6 hover:-translate-y-1 hover:text-yellow-300 hover:scale-110 duration-300">
                {' '}
-               <Link to="skills" smooth={true} duration={500}>
+               <Link to="skills" smooth={true} duration={500} offset={-80}>
                   Skills
+               </Link>
+            </li>
+            <li className="py-6 hover:-translate-y-1 hover:text-green-500 hover:scale-110 duration-300">
+               {' '}
+               <Link to="projects" smooth={true} duration={500} offset={-80}>
+                  Projects
                </Link>
             </li>
             <li className="py-6 hover:-translate-y-1 hover:text-green-500 hover:scale-110 duration-300 ">
                {' '}
-               <Link to="experience" smooth={true} duration={500}>
+               <Link to="experience" smooth={true} duration={500} offset={-80}>
                   Experience
-               </Link>
-            </li>
-            <li className="py-6 hover:-translate-y-1 hover:text-blue-500 hover:scale-110 duration-300">
-               {' '}
-               <Link to="projects" smooth={true} duration={500}>
-                  Projects
                </Link>
             </li>
             {/* <li className="py-6 hover:-translate-y-1 hover:text-indigo-500 hover:scale-110 duration-300 ">
@@ -68,7 +72,7 @@ const Navbar = ({ setBackgroundColor }) => {
          </ul>
 
          {/* Hamburger */}
-         <div onClick={handleClick} className="md:hidden z-10">
+         <div onClick={handleClick} className="text-2xl md:hidden z-10">
             {!nav ? <FaBars /> : <FaTimes />}
          </div>
          <div
@@ -89,65 +93,79 @@ const Navbar = ({ setBackgroundColor }) => {
                      About
                   </Link>
                </li>
+
                <li className="py-6 text-4xl">
-                  <Link onClick={handleClick} to="skills" smooth={true} duration={500}>
-                     Skills
+                  <Link
+                     onClick={handleClick}
+                     to="projects"
+                     smooth={true}
+                     duration={500}
+                     offset={-80}>
+                     Projects
                   </Link>
                </li>
                <li className="py-6 text-4xl">
-                  <Link onClick={handleClick} to="experience" smooth={true} duration={500}>
+                  <Link
+                     onClick={handleClick}
+                     to="experience"
+                     smooth={true}
+                     duration={500}
+                     offset={-80}>
                      Experience
                   </Link>
                </li>
                <li className="py-6 text-4xl">
-                  <Link onClick={handleClick} to="projects" smooth={true} duration={500}>
-                     Projects
+                  <Link onClick={handleClick} to="skills" smooth={true} duration={500} offset={-80}>
+                     Skills
                   </Link>
                </li>
+               <li>
+                  <div className=" w-full flex items-center p-4 bg-[#0a192f]">
+                     <ul className="flex justify-evenly items-center space-x-4 w-full mx-10">
+                        <li className="w-14 h-14 flex justify-center items-center bg-blue-600 rounded-md">
+                           <a
+                              className="flex justify-center items-center w-full text-gray-300"
+                              href="https://www.linkedin.com/in/matt-depauw/"
+                              target="_blank"
+                              rel="noopener noreferrer">
+                              <FaLinkedin size={20} />
+                           </a>
+                        </li>
+                        <li className="w-14 h-14 flex justify-center items-center  bg-[#333333] rounded-md">
+                           <a
+                              className="flex justify-center items-center w-full text-gray-300"
+                              href="https://www.github.com/mattriots"
+                              target="_blank"
+                              rel="noopener noreferrer">
+                              <FaGithub size={20} />
+                           </a>
+                        </li>
+                        <li className="w-14 h-14 flex justify-center items-center  bg-[#6fc2b0] rounded-md">
+                           <a
+                              className="flex justify-center items-center w-full text-gray-300"
+                              href="mailto:mattdepauw@gmail.com"
+                              target="_blank"
+                              rel="noopener noreferrer">
+                              <HiOutlineMail size={20} />
+                           </a>
+                        </li>
+                        <li
+                           className="w-14 h-14 flex justify-center items-center  bg-[#565f69] rounded-md"
+                           onClick={openResumeModal}>
+                           <div className="flex justify-center items-center w-full text-gray-300">
+                              <BsFillPersonLinesFill size={20} />
+                           </div>
+                        </li>
+                     </ul>
+                  </div>
+               </li>
+
                {/* <li className="py-6 text-4xl">
                   <Link onClick={handleClick} to="contact" smooth={true} duration={500}>
                      Contact
                   </Link>
                </li> */}
             </ul>
-            <div className="absolute bottom-0 left-0 w-full flex items-center p-4 bg-[#0a192f]">
-               <ul className="flex justify-evenly items-center w-full mx-10">
-                  <li className="w-14 h-14 flex justify-center items-center  bg-blue-600 rounded-md">
-                     <a
-                        className="flex justify-center items-center w-full text-gray-300"
-                        href="https://www.linkedin.com/in/matt-depauw/"
-                        target="_blank"
-                        rel="noopener noreferrer">
-                        <FaLinkedin size={20} />
-                     </a>
-                  </li>
-                  <li className="w-14 h-14 flex justify-center items-center  bg-[#333333] rounded-md">
-                     <a
-                        className="flex justify-center items-center w-full text-gray-300"
-                        href="https://www.github.com/mattriots"
-                        target="_blank"
-                        rel="noopener noreferrer">
-                        <FaGithub size={20} />
-                     </a>
-                  </li>
-                  <li className="w-14 h-14 flex justify-center items-center  bg-[#6fc2b0] rounded-md">
-                     <a
-                        className="flex justify-center items-center w-full text-gray-300"
-                        href="mailto:mattdepauw@gmail.com"
-                        target="_blank"
-                        rel="noopener noreferrer">
-                        <HiOutlineMail size={20} />
-                     </a>
-                  </li>
-                  <li
-                     className="w-14 h-14 flex justify-center items-center  bg-[#565f69] rounded-md"
-                     onClick={openResumeModal}>
-                     <div className="flex justify-center items-center w-full text-gray-300">
-                        <BsFillPersonLinesFill size={20} />
-                     </div>
-                  </li>
-               </ul>
-            </div>
          </div>
 
          {/* Social on left side*/}

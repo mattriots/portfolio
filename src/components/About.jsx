@@ -15,9 +15,12 @@ const About = () => {
                   <p>Hi. I'm Matt</p>
                </div>
                <div>
-                  <p>I'm a full stack web developer based in the USA.
+                  <p className='text-2xl pb-4'>I am a Musician turned Software Engineer</p>
+                  <p>
+                     I am highly interested in the world of Full Stack Development and Devops/Cloud Infrastructure.
                      This is a portfolio site that I built using React and Tailwind CSS.
-                     I borrowed this design from // ENTER THE GUY'S NAME HERE //
+                     The goal of this page is to showcase my abilities as a developer while also
+                     offering a playground for me to experiment with new technologies and projects. 
                   </p>
                </div>
             </div>
