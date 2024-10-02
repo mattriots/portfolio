@@ -10,7 +10,7 @@ function App() {
    const [backgroundColor, setBackgroundColor] = useState('#0a192f');
 
    return (
-      <div className="h-screen transition-all" style={{ backgroundColor: backgroundColor }}>
+      <div className="w-full min-h-screen" style={{ backgroundColor: backgroundColor }}>
          <Navbar setBackgroundColor={setBackgroundColor} />
          <Home />
          <About />

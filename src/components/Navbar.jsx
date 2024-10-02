@@ -47,19 +47,19 @@ const Navbar = ({ setBackgroundColor }) => {
             </li>
             <li className="py-6 hover:-translate-y-1 hover:text-yellow-300 hover:scale-110 duration-300">
                {' '}
-               <Link to="skills" smooth={true} duration={500}>
+               <Link to="skills" smooth={true} duration={500} offset={-80}>
                   Skills
                </Link>
             </li>
             <li className="py-6 hover:-translate-y-1 hover:text-green-500 hover:scale-110 duration-300">
                {' '}
-               <Link to="projects" smooth={true} duration={500}>
+               <Link to="projects" smooth={true} duration={500} offset={-80}>
                   Projects
                </Link>
             </li>
             <li className="py-6 hover:-translate-y-1 hover:text-green-500 hover:scale-110 duration-300 ">
                {' '}
-               <Link to="experience" smooth={true} duration={500}>
+               <Link to="experience" smooth={true} duration={500} offset={-80}>
                   Experience
                </Link>
             </li>
@@ -72,7 +72,7 @@ const Navbar = ({ setBackgroundColor }) => {
          </ul>
 
          {/* Hamburger */}
-         <div onClick={handleClick} className="md:hidden z-10">
+         <div onClick={handleClick} className="text-2xl md:hidden z-10">
             {!nav ? <FaBars /> : <FaTimes />}
          </div>
          <div
@@ -93,19 +93,30 @@ const Navbar = ({ setBackgroundColor }) => {
                      About
                   </Link>
                </li>
+
                <li className="py-6 text-4xl">
-                  <Link onClick={handleClick} to="skills" smooth={true} duration={500}>
-                     Skills
-                  </Link>
-               </li>
-               <li className="py-6 text-4xl">
-                  <Link onClick={handleClick} to="projects" smooth={true} duration={500}>
+                  <Link
+                     onClick={handleClick}
+                     to="projects"
+                     smooth={true}
+                     duration={500}
+                     offset={-80}>
                      Projects
                   </Link>
                </li>
                <li className="py-6 text-4xl">
-                  <Link onClick={handleClick} to="experience" smooth={true} duration={500}>
+                  <Link
+                     onClick={handleClick}
+                     to="experience"
+                     smooth={true}
+                     duration={500}
+                     offset={-80}>
                      Experience
+                  </Link>
+               </li>
+               <li className="py-6 text-4xl">
+                  <Link onClick={handleClick} to="skills" smooth={true} duration={500} offset={-80}>
+                     Skills
                   </Link>
                </li>
                <li>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FaCircle } from 'react-icons/fa';
 
 const experiences = [
@@ -53,51 +53,53 @@ const ExperienceTimeline = () => {
    };
 
    return (
-      <div name="experience" className="w-full h-screen bg-inherit text-gray-300">
-         <div className="max-w-4xl mx-auto p-8">
-            <h1 className="text-3xl font-bold text-center mb-8">Experience</h1>
-            <div className="relative border-l border-gray-300">
+      <div name="experience" className="w-full min-h-screen bg-inherit text-gray-300">
+         <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
+            <div className="pb-8">
+               <p className="text-4xl font-bold inline border-b-4 text-gray-300 border-pink-600">
+                  Experience
+               </p>
+            </div>
+            {/* Stacked timeline format */}
+            <div className="">
                {experiences.map((experience, index) => (
-                  <div key={index} className="mb-8 ml-4 bg-white rounded-md text-black relative">
-                     {/* Display Dates on the Left */}
-                     <div className="hidden md:block md:absolute -left-32 top-4 text-gray-400 text-sm w-28">
-                        {experience.dates}
-                     </div>
-
+                  <div
+                     key={index}
+                     id={`experience-card-${index}`}
+                     className={`relative bg-white rounded-md text-black shadow-lg p-4 mb-8 cursor-pointer transition-all duration-300 mx-auto ${
+                        openCard === index ? 'h-auto w-full max-w-4xl' : 'h-32 w-full max-w-md'
+                     }`}
+                     onClick={() => handleToggle(index)}
+                     style={{ zIndex: openCard === index ? 10 : 1 }}>
                      {/* Timeline Marker */}
-                     <div className="absolute -left-3 w-6 h-6 rounded-full bg-blue-500 flex items-center justify-center">
+                     <div className="absolute -left-8 top-6 w-6 h-6 rounded-full bg-blue-500 flex items-center justify-center">
                         <FaCircle className="text-white" size={12} />
                      </div>
 
-                     {/* Experience Card */}
-                     <div
-                        className={`p-4 rounded-lg shadow-md cursor-pointer hover:bg-opacity-50 transition duration-300 ${
-                           openCard === index ? 'bg-opacity-50' : ''
-                        }`}
-                        onClick={() => handleToggle(index)}>
-                        <div className="flex justify-between items-center">
-                           <div>
-                              <h2 className="text-lg font-bold">{experience.role}</h2>
-                              <p className="italic text-gray-500">{experience.company}</p>
-                           </div>
-                           <div>
-                              {openCard === index ? (
-                                 <span className="text-xl">−</span>
-                              ) : (
-                                 <span className="text-xl">+</span>
-                              )}
-                           </div>
+                     {/* Experience Card Content */}
+                     <div className="flex justify-between items-center">
+                        <div>
+                           <h2 className="text-lg font-bold">{experience.role}</h2>
+                           <p className="italic text-gray-500">{experience.company}</p>
                         </div>
-                        {openCard === index && (
-                           <div className="mt-4">
-                              <ul className="list-disc pl-5 space-y-2 text-sm text-gray-600">
-                                 {experience.description.map((desc, i) => (
-                                    <li key={i}>{desc}</li>
-                                 ))}
-                              </ul>
-                           </div>
-                        )}
+                        <div>
+                           {openCard === index ? (
+                              <span className="text-2xl">−</span>
+                           ) : (
+                              <span className="text-2xl">+</span>
+                           )}
+                        </div>
                      </div>
+                     {openCard === index && (
+                        <div className="mt-4">
+                           <p className="text-gray-400 mb-2">{experience.dates}</p>
+                           <ul className="list-disc pl-5 space-y-2 text-md text-gray-600">
+                              {experience.description.map((desc, i) => (
+                                 <li key={i}>{desc}</li>
+                              ))}
+                           </ul>
+                        </div>
+                     )}
                   </div>
                ))}
             </div>
