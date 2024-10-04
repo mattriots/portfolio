@@ -30,7 +30,7 @@ const Navbar = ({ setBackgroundColor }) => {
          </div>
          {/* Top Right Menu */}
 
-         <div className="hidden md:flex justify-center flex-grow">
+         <div className="flex justify-center flex-grow">
             <ColorPickerDrop setBackgroundColor={setBackgroundColor} />
          </div>
 
@@ -40,18 +40,13 @@ const Navbar = ({ setBackgroundColor }) => {
                   Home
                </Link>
             </li>
-            <li className="py-6 hover:-translate-y-1 hover:text-orange-300 hover:scale-110 duration-300">
+            <li className="py-6 hover:-translate-y-1 hover:text-orange-500 hover:scale-110 duration-300">
                <Link to="about" smooth={true} duration={500}>
                   About
                </Link>
             </li>
-            <li className="py-6 hover:-translate-y-1 hover:text-yellow-300 hover:scale-110 duration-300">
-               {' '}
-               <Link to="skills" smooth={true} duration={500} offset={-80}>
-                  Skills
-               </Link>
-            </li>
-            <li className="py-6 hover:-translate-y-1 hover:text-green-500 hover:scale-110 duration-300">
+
+            <li className="py-6 hover:-translate-y-1 hover:text-yellow-500 hover:scale-110 duration-300">
                {' '}
                <Link to="projects" smooth={true} duration={500} offset={-80}>
                   Projects
@@ -61,6 +56,12 @@ const Navbar = ({ setBackgroundColor }) => {
                {' '}
                <Link to="experience" smooth={true} duration={500} offset={-80}>
                   Experience
+               </Link>
+            </li>
+            <li className="py-6 hover:-translate-y-1 hover:text-blue-500 hover:scale-110 duration-300">
+               {' '}
+               <Link to="skills" smooth={true} duration={500} offset={-80}>
+                  Skills
                </Link>
             </li>
             {/* <li className="py-6 hover:-translate-y-1 hover:text-indigo-500 hover:scale-110 duration-300 ">

@@ -4,23 +4,45 @@ const About = () => {
    return (
       <div name="about" className="w-full h-screen bg-inherit text-gray-300">
          <div className="flex flex-col justify-center items-center w-full h-full">
-            <div className="max-w-[1000px] w-full grid grid-cols-2 gap-8">
-               <div className="sm:text-right pb-8 pl-4">
+            <div className="max-w-[1000px] w-full">
+               <div className="pb-8 pl-4">
                   <p className="text-4xl font-bold inline border-b-4 border-pink-600">About</p>
                </div>
                <div></div>
             </div>
-            <div className="max-w-[1000px] w-full grid sm:grid-cols-2 gap-8 px-4">
-               <div className="sm:text-right text-4xl font-bold">
-                  <p>Hi. I'm Matt</p>
+            <div className="max-w-[1000px] w-full px-4 py-8 bg-gradient-to-r from-blue-500 via-purple-600 to-pink-500 bg-opacity-80 rounded-lg shadow-lg text-white">
+               <div className="text-4xl font-bold mb-6">
+                  <p>Hi - I am Matt</p>
                </div>
+
                <div>
-                  <p className='text-2xl pb-4'>I am a Musician turned Software Engineer</p>
+                  <p className="text-2xl pb-4 font-semibold text-yellow-300">
+                     A Musician turned Software Engineer
+                  </p>
+                  <p className="mb-4">
+                     I am highly interested in the world of{' '}
+                     <span className="text-pink-200 font-bold">Full Stack Development</span> and{' '}
+                     <span className="text-purple-200 font-bold">DevOps/Cloud Infrastructure</span>.
+                  </p>
+                  <p className="mb-4">
+                     This is a simple portfolio site that I built using{' '}
+                     <a
+                        href="#"
+                        className="underline text-blue-200 hover:text-white transition duration-300">
+                        React
+                     </a>{' '}
+                     and{' '}
+                     <a
+                        href="#"
+                        className="underline text-blue-200 hover:text-white transition duration-300">
+                        Tailwind CSS
+                     </a>
+                     .
+                  </p>
                   <p>
-                     I am highly interested in the world of Full Stack Development and Devops/Cloud Infrastructure.
-                     This is a portfolio site that I built using React and Tailwind CSS.
-                     The goal of this page is to showcase my abilities as a developer while also
-                     offering a playground for me to experiment with new technologies and projects. 
+                     The goal of this page is to{' '}
+                     <span className="font-bold text-purple-300">showcase my experience</span> as
+                     well as offer a place for me to experiment on projects.
                   </p>
                </div>
             </div>

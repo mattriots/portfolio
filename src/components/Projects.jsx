@@ -11,14 +11,14 @@ const Projects = () => {
                <p className="text-4xl font-bold inline border-b-4 text-gray-300 border-pink-600">
                   Projects
                </p>
-               <p className="py-6">// Projects I have worked on</p>
+               {/* <p className="py-6">|| Projects I have worked on ||</p> */}
             </div>
             {/* Container */}
             <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
                {/* Grid item */}
                <div
                   style={{ backgroundImage: `url(${NSOM})` }}
-                  className="shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div hover:-translate-y-2 hover:scale-105 duration-500">
+                  className="shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div hover:scale-105 duration-500">
                   {/* Hover FX */}
                   <div className="text-center opacity-0 group-hover:opacity-100">
                      <span className="text-2xl font-bold text-white tracking-wider">
@@ -48,7 +48,7 @@ const Projects = () => {
                {/* Grid item */}
                <div
                   style={{ backgroundImage: `url(${LOGO})` }}
-                  className="shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div hover:-translate-y-2 hover:scale-105 duration-500">
+                  className="shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div hover:scale-105 duration-500">
                   {/* Hover FX */}
                   <div className="text-center opacity-0 group-hover:opacity-100">
                      <span className="text-2xl font-bold text-white tracking-wider">Portfolio</span>
