@@ -52,7 +52,7 @@ To run this project locally, follow these steps:
 2. **Navigate to the project directory:**
 
     ```bash
-
+    
     cd portfolio
 
 3. **Install dependencies:**
@@ -66,7 +66,6 @@ To run this project locally, follow these steps:
     ```bash
 
     npm start
-
 
 ### Usage
 
