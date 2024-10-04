@@ -48,3 +48,49 @@ To run this project locally, follow these steps:
 
    ```bash
    git clone https://github.com/mattriots/portfolio.git
+
+2. **Navigate to the project directory:**
+
+    ```bash
+
+    cd portfolio
+
+3. **Install dependencies:**
+
+    ```bash
+
+    npm install
+
+4. **Start the development server:**
+
+    ```bash
+
+    npm start
+
+
+### Usage
+
+- **Color Picker**: Use the color picker on the homepage to customize the background.
+- **Navigate**: Explore the different sections, including Experience and Projects, to learn more about my skills and work.
+- **Mobile Friendly**: The portfolio is fully responsive and optimized for mobile devices.
+
+### Contributing
+
+This is my personal project, but I welcome contributions and suggestions. If you'd like to contribute, feel free to submit a pull request or open an issue.
+
+### Contact
+
+Feel free to reach out to me for collaboration or inquiries:
+
+- **Email**: [mattdepauw@gmail.com](mailto:mattdepauw@gmail.com)
+- **LinkedIn**: [linkedin.com/in/matt-depauw](https://www.linkedin.com/in/matt-depauw/)
+- **GitHub**: [github.com/mattriots](https://github.com/mattriots)
+
+### License
+
+This project is licensed under the [MIT License](LICENSE).
+
+### Acknowledgments
+
+- **Starter Code and Inspiration**: Special thanks to [Clint Briley](https://github.com/fireclint/portfolio-app-react/tree/main) for providing the starter code and inspiration for this portfolio.
+- **[React Colorful](https://github.com/omgovich/react-colorful)**: The color picker used in this project.
