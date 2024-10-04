@@ -2,6 +2,9 @@
 
 ![React](https://img.shields.io/badge/-React-61DAFB?style=flat&logo=react&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/-Tailwind%20CSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white)
+![Build](https://github.com/mattriots/portfolio/actions/workflows/static.yml/badge.svg)
+![Deploy](https://github.com/mattriots/portfolio/actions/workflows/static.yml/badge.svg)
+
 
 Welcome to my personal portfolio! This project is built using **React** and **Tailwind CSS** and serves as a platform to showcase my experience, skills, and projects. The site is continually evolving as I add new features and experiment with different technologies.
 
