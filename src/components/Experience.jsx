@@ -72,7 +72,7 @@ const ExperienceTimeline = () => {
                      onClick={() => handleToggle(index)}
                      style={{ zIndex: openCard === index ? 10 : 1 }}>
                      {/* Timeline Marker */}
-                     <div className="absolute -left-8 top-6 w-6 h-6 rounded-full bg-blue-500 flex items-center justify-center">
+                     <div className="hidden md:absolute -left-8 top-6 w-6 h-6 rounded-full bg-blue-500 md:flex items-center justify-center">
                         <FaCircle className="text-white" size={12} />
                      </div>
 
