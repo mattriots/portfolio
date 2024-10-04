@@ -5,6 +5,7 @@ import About from './components/About';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Experience from './components/Experience';
+import Footer from './components/Footer';
 
 function App() {
    const [backgroundColor, setBackgroundColor] = useState('#0a192f');
@@ -17,6 +18,7 @@ function App() {
          <Projects />
          <Experience />
          <Skills />
+         <Footer />
       </div>
    );
 }
