@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-scroll';
 import NSOM from '../assets/projects/nsom_cover.jpg';
 import LOGO from '../assets/projects/MD_logo_idea.png';
 
@@ -52,11 +53,12 @@ const Projects = () => {
                   <div className="text-center opacity-0 group-hover:opacity-100">
                      <span className="text-2xl font-bold text-white tracking-wider">Portfolio</span>
                      <div className="pt-8 text-center">
-                        <a href="/">
+                        <Link to="home" smooth={true} duration={500}>
                            <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg hover:scale-110 duration-500">
                               Link
                            </button>
-                        </a>
+                        </Link>
+
                         <a
                            href="https://github.com/mattriots/portfolio"
                            target="_blank"

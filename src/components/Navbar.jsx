@@ -40,36 +40,35 @@ const Navbar = ({ setBackgroundColor }) => {
                   Home
                </Link>
             </li>
-            <li className="py-6 hover:-translate-y-1 hover:text-orange-500 hover:scale-110 duration-300">
+            <li className="py-6 hover:-translate-y-1 hover:text-orange-400 hover:scale-110 duration-300">
                <Link to="about" smooth={true} duration={500}>
                   About
                </Link>
             </li>
-
             <li className="py-6 hover:-translate-y-1 hover:text-yellow-500 hover:scale-110 duration-300">
                {' '}
                <Link to="projects" smooth={true} duration={500} offset={-80}>
                   Projects
                </Link>
             </li>
-            <li className="py-6 hover:-translate-y-1 hover:text-green-500 hover:scale-110 duration-300 ">
+            <li className="py-6 hover:-translate-y-1 hover:text-green-500 hover:scale-110 duration-300">
+               {' '}
+               <Link to="work" smooth={true} duration={500} offset={-80}>
+                  Work
+               </Link>
+            </li>
+            <li className="py-6 hover:-translate-y-1 hover:text-blue-500 hover:scale-110 duration-300 ">
                {' '}
                <Link to="experience" smooth={true} duration={500} offset={-80}>
                   Experience
                </Link>
             </li>
-            <li className="py-6 hover:-translate-y-1 hover:text-blue-500 hover:scale-110 duration-300">
+            <li className="py-6 hover:-translate-y-1 hover:text-violet-500 hover:scale-110 duration-300">
                {' '}
                <Link to="skills" smooth={true} duration={500} offset={-80}>
                   Skills
                </Link>
             </li>
-            {/* <li className="py-6 hover:-translate-y-1 hover:text-indigo-500 hover:scale-110 duration-300 ">
-               {' '}
-               <Link to="contact" smooth={true} duration={500}>
-                  Contact
-               </Link>
-            </li> */}
          </ul>
 
          {/* Hamburger */}
@@ -103,6 +102,11 @@ const Navbar = ({ setBackgroundColor }) => {
                      duration={500}
                      offset={-80}>
                      Projects
+                  </Link>
+               </li>
+               <li className="py-6 text-4xl">
+                  <Link onClick={handleClick} to="work" smooth={true} duration={500} offset={-80}>
+                     Work
                   </Link>
                </li>
                <li className="py-6 text-4xl">
