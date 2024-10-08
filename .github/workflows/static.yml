@@ -31,9 +31,9 @@ jobs:
 
       # Step 2: Set up Node.js
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: '16' # Adjust Node.js version as per your project requirements
+          node-version: '18' # Adjust Node.js version as per your project requirements
 
       # Step 3: Install dependencies and build
       - name: Install dependencies and build
@@ -43,7 +43,7 @@ jobs:
 
       # Step 4: Upload build artifacts
       - name: Upload build artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: build
           path: './build' # Upload the build directory
@@ -63,7 +63,7 @@ jobs:
 
       # Step 2: Download the built artifact from the build job
       - name: Download build artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: build
           path: './build' # This is where the build artifact is downloaded
@@ -74,7 +74,7 @@ jobs:
 
       # Step 4: Upload the build artifact to GitHub Pages
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: './build' # Deploy the build directory
 
