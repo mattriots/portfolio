@@ -3,7 +3,7 @@ import { FaBars, FaTimes, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { HiOutlineMail } from 'react-icons/hi';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 import { Link } from 'react-scroll';
-import Logo from '../assets/MD_logo_idea.png';
+import LOGO from '../assets/projects/MD_logo_idea.png';
 import ColorPickerDrop from './ColorPickerDrop';
 import ResumeModal from './ResumeModal';
 
@@ -22,7 +22,7 @@ const Navbar = ({ setBackgroundColor }) => {
          <div>
             <Link to="home" smooth={true} duration={500}>
                <img
-                  src={Logo}
+                  src={LOGO}
                   alt="logo"
                   className="w-14 rounded-md hover:translate-x-1 hover:translate-y-1 hover:scale-110 duration-500"
                />
@@ -40,36 +40,35 @@ const Navbar = ({ setBackgroundColor }) => {
                   Home
                </Link>
             </li>
-            <li className="py-6 hover:-translate-y-1 hover:text-orange-500 hover:scale-110 duration-300">
+            <li className="py-6 hover:-translate-y-1 hover:text-orange-400 hover:scale-110 duration-300">
                <Link to="about" smooth={true} duration={500}>
                   About
                </Link>
             </li>
-
             <li className="py-6 hover:-translate-y-1 hover:text-yellow-500 hover:scale-110 duration-300">
                {' '}
                <Link to="projects" smooth={true} duration={500} offset={-80}>
                   Projects
                </Link>
             </li>
-            <li className="py-6 hover:-translate-y-1 hover:text-green-500 hover:scale-110 duration-300 ">
+            <li className="py-6 hover:-translate-y-1 hover:text-green-500 hover:scale-110 duration-300">
+               {' '}
+               <Link to="work" smooth={true} duration={500} offset={-80}>
+                  Work
+               </Link>
+            </li>
+            <li className="py-6 hover:-translate-y-1 hover:text-blue-500 hover:scale-110 duration-300 ">
                {' '}
                <Link to="experience" smooth={true} duration={500} offset={-80}>
                   Experience
                </Link>
             </li>
-            <li className="py-6 hover:-translate-y-1 hover:text-blue-500 hover:scale-110 duration-300">
+            <li className="py-6 hover:-translate-y-1 hover:text-violet-500 hover:scale-110 duration-300">
                {' '}
                <Link to="skills" smooth={true} duration={500} offset={-80}>
                   Skills
                </Link>
             </li>
-            {/* <li className="py-6 hover:-translate-y-1 hover:text-indigo-500 hover:scale-110 duration-300 ">
-               {' '}
-               <Link to="contact" smooth={true} duration={500}>
-                  Contact
-               </Link>
-            </li> */}
          </ul>
 
          {/* Hamburger */}
@@ -103,6 +102,11 @@ const Navbar = ({ setBackgroundColor }) => {
                      duration={500}
                      offset={-80}>
                      Projects
+                  </Link>
+               </li>
+               <li className="py-6 text-4xl">
+                  <Link onClick={handleClick} to="work" smooth={true} duration={500} offset={-80}>
+                     Work
                   </Link>
                </li>
                <li className="py-6 text-4xl">
