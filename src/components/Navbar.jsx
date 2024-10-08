@@ -3,7 +3,7 @@ import { FaBars, FaTimes, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { HiOutlineMail } from 'react-icons/hi';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 import { Link } from 'react-scroll';
-import Logo from '../assets/MD_logo_idea.png';
+import LOGO from '../assets/projects/MD_logo_idea.png';
 import ColorPickerDrop from './ColorPickerDrop';
 import ResumeModal from './ResumeModal';
 
@@ -22,7 +22,7 @@ const Navbar = ({ setBackgroundColor }) => {
          <div>
             <Link to="home" smooth={true} duration={500}>
                <img
-                  src={Logo}
+                  src={LOGO}
                   alt="logo"
                   className="w-14 rounded-md hover:translate-x-1 hover:translate-y-1 hover:scale-110 duration-500"
                />

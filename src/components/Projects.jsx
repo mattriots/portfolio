@@ -1,7 +1,6 @@
 import React from 'react';
-import WorkImg from '../assets/projects/workImg.jpeg';
 import NSOM from '../assets/projects/nsom_cover.jpg';
-import LOGO from '../assets/MD_logo_idea.png';
+import LOGO from '../assets/projects/MD_logo_idea.png';
 
 const Projects = () => {
    return (
@@ -14,7 +13,7 @@ const Projects = () => {
                {/* <p className="py-6">|| Projects I have worked on ||</p> */}
             </div>
             {/* Container */}
-            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                {/* Grid item */}
                <div
                   style={{ backgroundImage: `url(${NSOM})` }}
