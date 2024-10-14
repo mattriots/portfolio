@@ -21,23 +21,11 @@ const About = () => {
                   </p>
                   <p className="mb-4">
                      I am highly interested in the world of{' '}
-                     <span className="text-pink-200 font-bold">Full Stack Development</span> and{' '}
+                     <span className="text-pink-200 font-bold">Full Stack Development</span> and
                      <span className="text-purple-200 font-bold">DevOps/Cloud Infrastructure</span>.
                   </p>
                   <p className="mb-4">
-                     This is a simple portfolio site that I built using{' '}
-                     <a
-                        href="#"
-                        className="underline text-blue-200 hover:text-white transition duration-300">
-                        React
-                     </a>{' '}
-                     and{' '}
-                     <a
-                        href="#"
-                        className="underline text-blue-200 hover:text-white transition duration-300">
-                        Tailwind CSS
-                     </a>
-                     .
+                     This is a simple portfolio site that I built using React and Tailwind CSS.
                   </p>
                   <p>
                      The goal of this page is to{' '}
